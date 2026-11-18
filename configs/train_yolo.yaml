@@ -1,0 +1,21 @@
+# Entrainement / fine-tuning de YOLO (Ultralytics) sur VisDrone2019-DET.
+# Les cles `kind` et `weights` choisissent le modele ; le reste est transmis a model.train().
+# Doc des hyperparametres : https://docs.ultralytics.com/usage/cfg/
+kind: yolo
+weights: yolov8s.pt            # poids pre-entraines COCO (telecharges automatiquement)
+data: datasets/VisDrone/visdrone.yaml
+epochs: 100
+imgsz: 640
+batch: 16
+seed: 0
+deterministic: true
+workers: 8
+device: 0                      # "cpu" pour tester sans GPU
+optimizer: auto
+lr0: 0.01
+patience: 30                   # arret precoce
+cos_lr: false
+project: runs
+name: yolov8s_visdrone_640
+exist_ok: true
+plots: true

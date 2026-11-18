@@ -1,0 +1,9 @@
+# Parametres par defaut de la methode proposee (informatif ; les valeurs sont passees en ligne de commande).
+tile: 640            # taille des tuiles (px)
+overlap: 0.2         # chevauchement (fraction de la tuile)
+conf: 0.001          # seuil de confiance bas pour le calcul des AP
+tile_iou: 0.6        # NMS du detecteur, dans chaque tuile
+merge_iou: 0.5       # NMS de fusion entre tuiles (par classe)
+include_full: false  # ajouter une passe sur l'image entiere (grands objets)
+border_margin: 0     # supprime les boites collees a un bord interne de tuile (px)
+max_det: 500

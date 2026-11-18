@@ -1,0 +1,18 @@
+# Entrainement / fine-tuning de RT-DETR (Ultralytics) sur VisDrone2019-DET.
+# Memes donnees, meme taille d'entree et meme nombre d'epoques que YOLO (comparaison equitable).
+kind: rtdetr
+weights: rtdetr-l.pt           # poids pre-entraines COCO (telecharges automatiquement)
+data: datasets/VisDrone/visdrone.yaml
+epochs: 100
+imgsz: 640
+batch: 8                       # RT-DETR-L consomme plus de memoire GPU
+seed: 0
+deterministic: true
+workers: 8
+device: 0
+optimizer: auto
+patience: 30
+project: runs
+name: rtdetr_l_visdrone_640
+exist_ok: true
+plots: true

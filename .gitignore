@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+# donnees volumineuses et poids : non versionnes (voir README pour le telechargement)
+datasets/*
+!datasets/.gitkeep
+runs/
+*.pt
+*.pth
+*.zip
+# on versionne les resultats legers (csv/json/png) mais pas les sorties d'inference lourdes
+results/inference/
+.DS_Store
